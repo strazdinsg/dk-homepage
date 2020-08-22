@@ -4,66 +4,24 @@
     <meta charset="UTF-8">
     <title>Learning materials</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="application/javascript" src="js/data.js"></script>
+    <script type="application/javascript" src="js/content_builders.js"></script>
 </head>
 <body>
 
-<div class="container">
-    <h1><a id="week-1"></a>Week 1 - Course introduction and History of the Internet</h1>
-    <p>Week 1 consists of two parts. In the first part we discuss the structure of the course, requirements,
-        etc. In the second part we start by looking at the history of the Internet.</p>
+<div class="container" id="material-container"></div>
+<script type="application/javascript">
+    for (let weekNr = 1; weekNr <= weeks.length; ++weekNr) {
+        printWeekData(weekNr);
+    }
 
-    <p>Expected knowledge after learning this topic:
-    <ol>
-        <li>Communication:
-            <ul>
-                <li>Why is communication needed?</li>
-                <li>What type of communication existed before the Internet?</li>
-            </ul>
-        </li>
-        <li>
-            Packet switching:
-            <ul>
-                <li>What is circuit switching? What are the advantages and drawbacks of it?</li>
-                <li>What is packet switching and why is it important for modern communication?</li>
-            </ul>
-        </li>
-        <li>
-            Predecessors of the Internet:
-            <ul>
-                <li>First packet-switched network: ARPANET. When and where did it arise?</li>
-                <li>ALOHAnet and other initiatives</li>
-            </ul>
-        </li>
-        <li>
-            How was a global Inter-network created?
-            <ul>
-                <li>Common protocols as a precondition for a global network</li>
-                <li>When and where is the Internet created?</li>
-                <li>TCP as the first common protocol</li>
-                <li>When does Europe join? When does Norway join?</li>
-            </ul>
-        </li>
-        <li>The web as the driver for rapid growth of the Internet</li>
-        <li>Status of the Internet today, recent developments:
-            <ul>
-                <li>Fast fiber-optics networks</li>
-                <li>Internet everywhere with 5G and other technologies</li>
-                <li>Smart devices, Internet of Things</li>
-                <li>All types of traffic sent over the Internet</li>
-            </ul>
-        </li>
-    </ol>
-    </p>
-
-    <p>Materials for the lecture:</p>
-    <ul>
-        <li><a href="slides/Lecture%2001-1%20-Introduction.pdf">Slides for the Introduction part</a></li>
-        <li><a href="slides/Lecture%2001-2%20History%20of%20the%20Internet.pdf">Slides for the History part</a></li>
-        <li><a href="videos.html?week=1">Videos for the History part</a></li>
-        <li><a href="exercises/Exercises%20for%20Lecture%201.pdf">Exercises</a></li>
-        <li>Relevant book chapters: Chapter 1.7 in Kurose's book; Chapter 1.4 in Hallsteinsens book.</li>
-    </ul>
-
-</div>
+    function printWeekData(weekNr) {
+        const containerDiv = document.getElementById("material-container");
+        printWeekHeading(weekNr, containerDiv);
+        printWeekDescription(weekNr, containerDiv);
+        printWeekContents(weekNr, containerDiv);
+        printWeekMaterials(weekNr, containerDiv);
+    }
+</script>
 </body>
 </html>

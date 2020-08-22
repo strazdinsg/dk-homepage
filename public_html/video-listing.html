@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <title>Videos for all the weeks</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="application/javascript" src="js/data.js"></script>
+    <script type="application/javascript" src="js/content_builders.js"></script>
 </head>
 <body>
 
-<p><a href="videos.html?week=1">Week 1: history of the Internet</a></p>
+<script type="application/javascript">
+    for (let weekNr = 0; weekNr < weeks.length; ++weekNr) {
+        createVideoLink(weekNr + 1);
+    }
+</script>
 
 </body>
 </html>

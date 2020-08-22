@@ -5,6 +5,8 @@
     <title>Lecture videos</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="application/javascript" src="js/data.js"></script>
+    <script type="application/javascript" src="js/content_builders.js"></script>
 
     <style type="text/css">
         .video-cell {
@@ -29,55 +31,12 @@
 </head>
 <body>
 
-<h1>Videos for Week 1 - History of the Internet</h1>
-<!-- TODO - Load videos according to the current week -->
-
-<div class="video-cell">
-    <h2>History of Communication</h2>
-    <iframe src="https://mediasite.ntnu.no/Mediasite/Play/74fe8a2a4f704d9ab1650994568122021d"
-            allowfullscreen
-            msallowfullscreen allow="fullscreen">
-    </iframe>
-</div>
-<div class="video-cell">
-    <h2>Packet Switching</h2>
-    <iframe src="https://mediasite.ntnu.no/Mediasite/Play/106c43be8862443684ff38221ea7a4dc1d"
-            allowfullscreen
-            msallowfullscreen allow="fullscreen">
-    </iframe>
-</div>
-
-<div class="video-cell">
-    <h2>ARPANET</h2>
-    <iframe src="https://mediasite.ntnu.no/Mediasite/Play/b870f98112ac47b9abb20e4352c740501d"
-            allowfullscreen
-            msallowfullscreen allow="fullscreen">
-    </iframe>
-</div>
-
-<div class="video-cell">
-    <h2>Internetworking</h2>
-    <iframe src="https://mediasite.ntnu.no/Mediasite/Play/b334a1373d9c4624b54713f4a07e7a161d"
-            allowfullscreen
-            msallowfullscreen allow="fullscreen">
-    </iframe>
-</div>
-
-<div class="video-cell">
-    <h2>The Web as a Catalyst</h2>
-    <iframe src="https://mediasite.ntnu.no/Mediasite/Play/8f3b30d0879c4efda60aa01bf6fd5a8a1d"
-            allowfullscreen
-            msallowfullscreen allow="fullscreen">
-    </iframe>
-</div>
-
-<div class="video-cell">
-    <h2>Recent Developments</h2>
-    <iframe src="https://mediasite.ntnu.no/Mediasite/Play/8e6a094ce8164046b1decfa72213c3d81d"
-            allowfullscreen
-            msallowfullscreen allow="fullscreen">
-    </iframe>
-</div>
+<script>
+    if (currentWeek >= 0 && currentWeek <= weeks.length) {
+        printWeekHeading(currentWeek);
+        weeks[currentWeek - 1].videos.forEach(video => showVideo(video));
+    }
+</script>
 
 </body>
 </html>
