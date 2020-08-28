@@ -90,7 +90,12 @@ function printWeekMaterials(weekNr, parentNode) {
         bookNode.innerHTML = createBookContent(week.book_chapters);
         listNode.appendChild(bookNode);
     }
-
+    if (week.links) {
+        const linkNode = createLinks(week.links, "Online materials");
+        if (linkNode) {
+            listNode.appendChild(linkNode);
+        }
+    }
     parentNode.appendChild(listNode);
 }
 
@@ -144,6 +149,27 @@ function createBookChapterContent(chapters, bookName) {
 }
 
 /**
+ * Create a node with external links
+ * @param {array} links Array containing objects with text and link
+ * @param {string} linkTitle The title to show describing the links
+ * @return {Element} DOM Element containing the list
+ */
+function createLinks(links, linkTitle) {
+    const list = document.createElement("ul");
+    links.forEach(link => {
+        const item = document.createElement("li");
+        item.innerHTML = "<a href='" + link.url +"'>" + link.text + "</a>";
+        list.appendChild(item);
+    });
+    // This whole thing will be a single item in a list
+    const wrapper = document.createElement("li");
+    wrapper.innerText = linkTitle + ": ";
+    wrapper.appendChild(list);
+    return wrapper;
+}
+
+
+/**
  * Create link to a video of a specific week
  * @param {int} weekNr Week number, starts at 1, not at zero.
  */
@@ -166,12 +192,25 @@ function showVideo(video) {
     const h2 = document.createElement("h2");
     h2.innerText = video.title;
     containerDiv.appendChild(h2);
-    const iframe = document.createElement("iframe");
-    iframe.setAttribute("src", "https://mediasite.ntnu.no/Mediasite/Play/" + video.mediasite_id);
-    iframe.setAttribute("msallowfullscreen", "");
-    iframe.setAttribute("allow", "fullscreen");
-    containerDiv.appendChild(iframe);
-    document.body.appendChild(containerDiv);
+    let iframe = document.createElement("iframe");
+    if (video.youtube_id) {
+        // A YouTube video
+        iframe.setAttribute("src", "https://www.youtube-nocookie.com/embed/" + video.youtube_id);
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+    } else if (video.mediasite_id) {
+        // Video stored on MediaSite
+        iframe.setAttribute("src", "https://mediasite.ntnu.no/Mediasite/Play/" + video.mediasite_id);
+        iframe.setAttribute("msallowfullscreen", "");
+        iframe.setAttribute("allow", "fullscreen");
+    } else {
+        iframe = null;
+    }
+
+    if (iframe) {
+        containerDiv.appendChild(iframe);
+        document.body.appendChild(containerDiv);
+    }
 }
 
 /**
