@@ -213,10 +213,117 @@ const weeks = [
         ],
         exercises: "Exercises%20for%20Lecture%202.pdf",
         book_chapters: {
-            kurose: [],
-            hallsteinsen: []
+            kurose: [
+                "1.1.1 (Nuts and bolts)",
+                "1.1.2 (Service description)",
+                "1.1.3 (Protocols)",
+                "1.2.1 (Access networks)",
+                "1.3.3 (ISP)",
+                "1.4.1 and 1.4.2 (Queues, delays, packet loss)"
+            ],
+            hallsteinsen: [
+                "3.1 (Nuts and bolts, and service description)",
+                "2.2 (Protocols)"
+            ]
         }
-    },
+    }, // EOF Week 2
+
+    //////////////////////
+    // Week 3
+    //////////////////////
+    {
+        topic: "Physical layer",
+        description: "We discuss physical-layer issues: how to encode data into bits and which are popular physical media used for computer networks.",
+        videos: [
+            {
+                title: "PHY #1: Analog and digital data",
+                mediasite_id: "8293aa2b0abc436a8d6db8ea54d86eb31d"
+            },
+            {
+                title: "PHY #2: Signaling, symbols, bitrate",
+                mediasite_id: "97e84a5e592c487db9dbc3e27ae306491d"
+            },
+            {
+                title: "PHY #3: Digital signaling",
+                mediasite_id: "e4b550d45472486fa8fb414d9559e89c1d"
+            },
+            {
+                title: "PHY #4: Analog signaling",
+                mediasite_id: "4086d91ce1eb4f4a8c35b3ca8d87bf0d1d"
+            },
+            {
+                title: "PHY #5: Synchronization",
+                mediasite_id: "4bf2fdc92ff44288b0fc50e000faf6f81d"
+            },
+            {
+                title: "PHY #6: Physical media",
+                mediasite_id: "c2f0286f3df34ac793121fbc5858bbff1d"
+            },
+            {
+                title: "How the fiber optic cable works",
+                youtube_id: "0MwMkBET_5I"
+            }
+        ],
+        content: [
+            {
+                title: "Data and signals",
+                items: [
+                    "Digital and analog data",
+                    "Encoding data as symbols into digital and analog signals"
+                ]
+            },
+            {
+                title: "Digital signaling",
+                items: [
+                    "The principles – encoding bits as different voltage levels",
+                    "Challenges: effectiveness, synchronization, robustness",
+                    "Digital encoding types: absolute, differential, bi-phase",
+                    "Popular encodings: Non-Return to Zero (NRZ), Non-Return to Zero Inverted (NRZI), Manchester (Biphase)"
+                ]
+            },
+            {
+                title: "Analog signaling",
+                items: [
+                    "The principle of modulating a carrier signal with data signal",
+                    "Popular modulations: ASK, FSK, PSK"
+                ]
+            },
+            {
+                title: "Synchronization",
+                items: ["why is it important to synchronize sender and receiver, what would happen if they are out-of-sync?"]
+            },
+            {
+                title: "Physical media",
+                items: [
+                    "Name the popular physical media today",
+                    "Advantages and drawbacks for each of these physical media: twisted pair cable, fiber optic cable, wireless communication"
+                ]
+            },
+        ],
+        slides: [
+            {
+                title: "Physical layer",
+                file: "Lecture%2003%20Physical%20layer.pdf"
+            },
+        ],
+        exercises: "Exercises%20for%20Lecture%203.pdf",
+        book_chapters: {
+            kurose: [
+                "1.2.2 (Physical media)"
+            ],
+            hallsteinsen: [
+                "6.6 (Medier)",
+                "6.7 (Analoge og digitale data og signaler)",
+            ]
+        },
+        links: [
+            {
+                text: "Data Encoding Techniques, Digital Modulation Techniques in Tutorialspoint",
+                url: "https://www.tutorialspoint.com/digital_communication/digital_communication_data_encoding_techniques.htm"
+            }
+        ]
+    }, // EOF Week 3
+
 ];
 
 // Use this variable find out the current week, numbering starts at 1 (not at 0)
