@@ -320,6 +320,10 @@ const weeks = [
             {
                 text: "Data Encoding Techniques, Digital Modulation Techniques in Tutorialspoint",
                 url: "https://www.tutorialspoint.com/digital_communication/digital_communication_data_encoding_techniques.htm"
+            },
+            {
+                text: "Chapters 6.5-6.7 from Hallsteinsen's book",
+                url: "./slides/HB%20Ch%206.5-6.7.pdf"
             }
         ]
     }, // EOF Week 3
