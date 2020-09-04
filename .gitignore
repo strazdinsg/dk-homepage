@@ -2,3 +2,6 @@
 .idea/
 
 *.pdf
+
+public_html/images/*.jpg
+public_html/images/*.png
