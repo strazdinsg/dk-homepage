@@ -13,6 +13,25 @@ function printWeekHeading(weekNr, parentNode) {
 }
 
 /**
+ * Print a heading that includes week nr, module nr and module name
+ * @param weekNr Week number, starts at 1
+ * @param moduleNr Module number, starts at 1
+ * @param parentNode Parent DOM Element where the content should be added. Use <body> when not specified.
+ */
+function printModuleHeading(weekNr, moduleNr, parentNode) {
+    if (!parentNode) parentNode = document.body;
+    const heading = document.createElement("h1");
+    const modules = weeks[weekNr - 1].modules;
+    const module = modules[moduleNr - 1];
+    let moduleTitle = "";
+    if (modules.length > 1) {
+        moduleTitle = ", Module " + moduleNr;
+    }
+    heading.innerText = "Week " + weekNr + moduleTitle + " - " + module.name;
+    parentNode.appendChild(heading);
+}
+
+/**
  * Print the description of the week's learning content
  * @param weekNr Week number, starts at 1
  * @param parentNode Parent DOM Element where the content should be added. Use <body> when not specified.
@@ -69,13 +88,11 @@ function printWeekContent(content, listNode) {
  */
 function printWeekMaterials(weekNr, parentNode) {
     if (!parentNode) parentNode = document.body;
-    const paragraph = document.createElement("p");
-    paragraph.innerText = "Learning materials:";
-    parentNode.appendChild(paragraph);
+    const heading = document.createElement("h2");
+    heading.innerText = "Learning materials";
+    parentNode.appendChild(heading);
     const listNode = document.createElement("ul");
-    const videoLinkNode = document.createElement("li");
-    videoLinkNode.innerHTML = "<a href=\"videos.html?week=" + weekNr + "\">Videos</a>"
-    listNode.appendChild(videoLinkNode);
+    listNode.appendChild(createVideoLinksForWeek(weekNr));
     const slideNode = document.createElement("li");
     const week = weeks[weekNr - 1];
     slideNode.innerHTML = createSlideLinkContent(week.slides);
@@ -158,7 +175,7 @@ function createLinks(links, linkTitle) {
     const list = document.createElement("ul");
     links.forEach(link => {
         const item = document.createElement("li");
-        item.innerHTML = "<a href='" + link.url +"'>" + link.text + "</a>";
+        item.innerHTML = "<a href='" + link.url + "'>" + link.text + "</a>";
         list.appendChild(item);
     });
     // This whole thing will be a single item in a list
@@ -172,14 +189,61 @@ function createLinks(links, linkTitle) {
 /**
  * Create link to a video of a specific week
  * @param {int} weekNr Week number, starts at 1, not at zero.
+ * @return Element A DOM element containing the link(s)
  */
-function createVideoLink(weekNr) {
-    const link = document.createElement("a");
-    link.setAttribute("href", "videos.html?week=" + weekNr);
-    link.innerText = "Week " + weekNr + ": " + weeks[weekNr - 1].topic;
+function createVideoLinksForWeek(weekNr) {
+    const week = weeks[weekNr - 1];
+    const item = document.createElement("li");
+    if (week.modules.length === 1) {
+        // A single module for the week
+        const link = document.createElement("a");
+        link.setAttribute("href", "videos.html?week=" + weekNr);
+        link.innerText = "Videos";
+        item.appendChild(link);
+    } else {
+        // Multiple modules for the week
+        item.innerText = "Videos this week:";
+        const videoList = document.createElement("ul");
+        item.appendChild(videoList);
+        let moduleIndex = 1;
+        week.modules.forEach(module => {
+            const videoItem = document.createElement("li");
+            videoList.appendChild(videoItem);
+            videoItem.innerHTML = "<a href='videos.html?week=" + weekNr + "&module=" + moduleIndex + "'>" + module.name + "</a>";
+            moduleIndex++;
+        });
+    }
+    return item;
+}
+
+/**
+ * Create link to a video of a specific week
+ * @param {int} weekNr Week number, starts at 1, not at zero.
+ * @return Element A DOM element containing the link(s)
+ */
+function createVideoListingLink(weekNr) {
+    const week = weeks[weekNr - 1];
     const paragraph = document.createElement("p");
-    paragraph.appendChild(link);
-    document.body.appendChild(paragraph);
+    if (week.modules.length === 1) {
+        // A single module for the week
+        const link = document.createElement("a");
+        link.setAttribute("href", "videos.html?week=" + weekNr);
+        link.innerText = "Week " + weekNr + ": " + weeks[weekNr - 1].topic;
+        paragraph.appendChild(link);
+    } else {
+        // Multiple modules for the week
+        let moduleIndex = 1;
+        week.modules.forEach(module => {
+            const link = document.createElement("a");
+            link.setAttribute("href", "videos.html?week=" + weekNr + "&module=" + moduleIndex);
+            link.innerText = "Week " + weekNr + ", Module " + moduleIndex + ": " + module.name;
+            const container = document.createElement("p");
+            container.appendChild(link);
+            paragraph.appendChild(container);
+            moduleIndex++;
+        });
+    }
+    return paragraph;
 }
 
 /**
@@ -218,12 +282,17 @@ function showVideo(video) {
  * @param {int} weekNr Week number, starts at 1, not at zero.
  * @param {Element} parentNode Parent node where the menu item will be added
  */
-function addVideoMenuItem(weekNr, parentNode) {
-    const menuItem = document.createElement("a");
-    menuItem.setAttribute("class", "dropdown-item");
-    menuItem.setAttribute("href", "videos.html?week=" + weekNr);
-    menuItem.innerText = "Week " + weekNr + " - " + weeks[weekNr - 1].topic;
-    parentNode.appendChild(menuItem);
+function addVideoMenuItems(weekNr, parentNode) {
+    const modules = weeks[weekNr - 1].modules;
+    let moduleIndex = 1;
+    modules.forEach(module => {
+        const menuItem = document.createElement("a");
+        menuItem.setAttribute("class", "dropdown-item");
+        menuItem.setAttribute("href", "videos.html?week=" + weekNr + "&module=" + moduleIndex);
+        menuItem.innerText = "Week " + weekNr + " - " + module.name;
+        parentNode.appendChild(menuItem);
+        moduleIndex++;
+    });
 }
 
 /**

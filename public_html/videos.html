@@ -33,8 +33,11 @@
 
 <script>
     if (currentWeek >= 0 && currentWeek <= weeks.length) {
-        printWeekHeading(currentWeek);
-        weeks[currentWeek - 1].videos.forEach(video => showVideo(video));
+        const modules = weeks[currentWeek - 1].modules;
+        if (currentModule > 0 && modules.length >= currentModule) {
+            printModuleHeading(currentWeek, currentModule);
+            modules[currentModule - 1].videos.forEach(video => showVideo(video));
+        }
     }
 </script>
 
