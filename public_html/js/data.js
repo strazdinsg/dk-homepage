@@ -344,6 +344,10 @@ const weeks = [
             {
                 text: "Chapters 6.5-6.7 from Hallsteinsen's book",
                 url: "./slides/HB%20Ch%206.5-6.7.pdf"
+            },
+            {
+                text: "Kahoot: repetition of material from weeks 1 and 2",
+                url: "https://create.kahoot.it/share/dk20-2-fundamentals/c36c3023-bf57-4f5a-94ac-e4cbcf35d49b"
             }
         ]
     }, // EOF Week 3
