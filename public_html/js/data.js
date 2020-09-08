@@ -511,6 +511,10 @@ const weeks = [
             {
                 text: "Network sockets (Wikipedia)",
                 url: "https://en.wikipedia.org/wiki/Network_socket"
+            },
+            {
+                text: "Kahoot: repetition of material from week 3",
+                url: "https://create.kahoot.it/share/dk20-3-physical-layer/2fdbd38d-47cf-44ca-b7f4-b8ddf5b7d8f5"
             }
         ]
     }, // EOF Week 4
