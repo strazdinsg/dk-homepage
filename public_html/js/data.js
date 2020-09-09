@@ -513,6 +513,10 @@ const weeks = [
                 url: "https://en.wikipedia.org/wiki/Network_socket"
             },
             {
+                text: "How to Decrypt SSL with Wireshark – HTTPS Decryption Guide",
+                url: "https://www.comparitech.com/net-admin/decrypt-ssl-with-wireshark/"
+            },
+            {
                 text: "Kahoot: repetition of material from week 3",
                 url: "https://create.kahoot.it/share/dk20-3-physical-layer/2fdbd38d-47cf-44ca-b7f4-b8ddf5b7d8f5"
             }
