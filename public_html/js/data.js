@@ -624,10 +624,10 @@ const weeks = [
                 text: "How to Decrypt SSL with Wireshark – HTTPS Decryption Guide",
                 url: "https://www.comparitech.com/net-admin/decrypt-ssl-with-wireshark/"
             },
-            // {
-            //     text: "Kahoot: repetition of material from week 4",
-            //     url: "TODO"
-            // }
+            {
+                text: "Kahoot: repetition of material from week 4",
+                url: "https://create.kahoot.it/share/dk-20-4-app-layer/2d77e6db-0c27-4286-9ecc-40fafd56fda6"
+            }
         ]
     }, // EOF Week 5
 
