@@ -513,15 +513,124 @@ const weeks = [
                 url: "https://en.wikipedia.org/wiki/Network_socket"
             },
             {
-                text: "How to Decrypt SSL with Wireshark – HTTPS Decryption Guide",
-                url: "https://www.comparitech.com/net-admin/decrypt-ssl-with-wireshark/"
-            },
-            {
                 text: "Kahoot: repetition of material from week 3",
                 url: "https://create.kahoot.it/share/dk20-3-physical-layer/2fdbd38d-47cf-44ca-b7f4-b8ddf5b7d8f5"
             }
         ]
     }, // EOF Week 4
+
+    //////////////////////
+    // Week 5
+    //////////////////////
+    {
+        topic: "The Web",
+        description: "This week  we discuss the world wide web (WWW) or the Web for short. The fundamental part of the web is the HTTP protocol, therefore most of the lecture is devoted to understanding HTTP. In the last part we also look at analysis of web traffic with both Wireshark and developer tools in the browser.",
+        // Used to separate the videos into modules
+        modules: [
+            {
+                name: "The Web",
+                videos: [
+                    {
+                        title: "Web structure",
+                        mediasite_id: "9ec0978d60db41fd8ce5950fa5a544da1d"
+                    },
+                    {
+                        title: "Get entertained (and informed) in just 50 sec! :D",
+                        youtube_id: "0TtlAPlQ1YY"
+                    },
+                    {
+                        title: "HTTP protocol overview",
+                        mediasite_id: "e80be3d3c61c444ebcb0bfdd2e91b3a51d"
+                    },
+                    {
+                        title: "HTTP request and response messages",
+                        mediasite_id: "0261470436b44077bc94f660278624371d"
+                    },
+                    {
+                        title: "Submitting data with HTTP POST",
+                        mediasite_id: "fc5c4032da4748158e0db3bf070d42701d"
+                    },
+                    {
+                        title: "Cookies",
+                        mediasite_id: "6ae40a3bdf2e45bfa95788c3540ea9dc1d"
+                    },
+                    {
+                        title: "Optimizations",
+                        mediasite_id: "3b4d06cc159240e2bec5e3a9cfd03aba1d"
+                    },
+                    {
+                        title: "Securing web with HTTPS",
+                        mediasite_id: "ec97afaf3aba47e2ba017ad4fcc2ffbb1d"
+                    },
+                    {
+                        title: "HTTP traffic analysis with Wireshark and Chrome Dev Tools",
+                        mediasite_id: "0c40adbf2b6547a1b2f67a67a5320b171d"
+                    }
+                ]
+            },
+        ],
+        content: [
+            {
+                title: "Overview of the web",
+                items: [
+                    "Four building blocks: browser, web server, HTTP protocol, HTML language",
+                    "Structure of modern web: HTML + CSS + Javascript",
+                ]
+            },
+            {
+                title: "HTTP protocol",
+                items: [
+                    "Request/response cycle",
+                    "Text-based message format",
+                    "Submitting data with POST"
+                ]
+            },
+            {
+                title: "Cookies",
+                items: [
+                    "Used for session management",
+                    "Privacy issues",
+                ]
+            },
+            {
+                title: "Securing HTTP with SSL",
+                items: []
+            },
+            {
+                title: "Analysis of web traffic",
+                items: [
+                    "With wireshark and Chrome developer tools",
+                    "How to see encrypted traffic"
+                ]
+            },
+        ],
+        slides: [
+            {
+                title: "The Web",
+                file: "Lecture%2005%20Web.pdf"
+            },
+        ],
+        exercises: "Exercises%20for%20Lecture%205.pdf",
+        book_chapters: {
+            kurose: [
+                "2.2"
+            ],
+            hallsteinsen: [
+                "3.2"
+            ]
+        },
+        links: [
+            {
+                text: "How to Decrypt SSL with Wireshark – HTTPS Decryption Guide",
+                url: "https://www.comparitech.com/net-admin/decrypt-ssl-with-wireshark/"
+            },
+            // {
+            //     text: "Kahoot: repetition of material from week 4",
+            //     url: "TODO"
+            // }
+        ]
+    }, // EOF Week 5
+
 ];
 
 // Use this variable find out the current week, numbering starts at 1 (not at 0)
