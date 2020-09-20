@@ -631,6 +631,173 @@ const weeks = [
         ]
     }, // EOF Week 5
 
+    //////////////////////
+    // Week 6
+    //////////////////////
+    {
+        topic: "Network programming (Sockets)",
+        description: "We discuss the fundamental way of programming networking apps - using socket API.",
+        // Used to separate the videos into modules
+        modules: [
+            {
+                name: "Socket introduction, theory",
+                videos: [
+                    {
+                        title: "Introduction, TCP and UDP",
+                        mediasite_id: "5f4aa4db96ba4201b9e73dfc4a2d0a9d1d"
+                    },
+                    {
+                        title: "Connection establishment",
+                        mediasite_id: "55aa71b94b804ef78c8075d09ad628c11d"
+                    },
+                    {
+                        title: "TCP connection establishment",
+                        mediasite_id: "06c402c428314a1691d2a41e455d9d321d"
+                    },
+                    {
+                        title: "Socket API",
+                        mediasite_id: "93c7ef6c68b94886a6f68ed6209827711d"
+                    },
+                ]
+            },
+            {
+                name: "Multi-threaded programming",
+                videos: [
+                    {
+                        title: "Motivation for multi-threading",
+                        mediasite_id: "e5136b2b924146d3b7bbb757a654754b1d"
+                    },
+                    {
+                        title: "Multi-threading in real life",
+                        mediasite_id: "fed259c0ada84fd3afd16476a618af671d"
+                    },
+                    {
+                        title: "Typical multi-threaded TCP server workflow",
+                        mediasite_id: "d701c1a404e44dcb99e4596a8b7743401d"
+                    },
+                    {
+                        title: "CPU threads",
+                        mediasite_id: "4072d94e713949a287165a2927fea09c1d"
+                    },
+                    {
+                        title: "Thread programming in Java",
+                        mediasite_id: "607c52b3c9484324aa72686e03005deb1d"
+                    },
+                    {
+                        title: "Thread programming in Python",
+                        mediasite_id: "0372fafad05d408aba2cea97879ed5881d"
+                    },
+                ]
+            },
+            {
+                name: "Socket programming in Java (Data)",
+                videos: [
+                    {
+                        title: "Example TCP application",
+                        mediasite_id: "01f7c3bae29c467789d47dda3f3397f11d"
+                    },
+                    {
+                        title: "One-page TCP client and server examples",
+                        mediasite_id: "1036ffb6cf564476b7767425166df5841d"
+                    },
+                    {
+                        title: "Opening and closing a socket",
+                        mediasite_id: "4ed59f2223294dd3b2b19869a9f7b9721d"
+                    },
+                    {
+                        title: "Send and receive data on the socket",
+                        mediasite_id: "a8b47a7c449d4b5e9e848abdef09a3361d"
+                    },
+                    {
+                        title: "Easier I/O with BufferedReader and PrintWriter",
+                        mediasite_id: "9712ee7b713a42b9938bb051982e602a1d"
+                    },
+                    {
+                        title: "Creating a TCP Server",
+                        mediasite_id: "f7988733c9714e61ab921dab3c640d2d1d"
+                    },
+                    {
+                        title: "Multi-threaded server",
+                        mediasite_id: "b002f4e1fe3b45efaef63fee05e55f821d"
+                    },
+                    {
+                        title: "Changing the protocol",
+                        mediasite_id: "e80bced3c0e844a481d2c0c4c291a3201d"
+                    },
+                    {
+                        title: "Objects as messages",
+                        mediasite_id: "889835825526475d83ec5a28391866551d"
+                    }
+                ]
+            },
+            {
+                name: "Socket programming in Python (Elektro)",
+                videos: [
+                    {
+                        title: "Example TCP application",
+                        mediasite_id: "95f9ccbb18d344b08d3f919c20aa88d01d"
+                    },
+                    {
+                        title: "PyCharm editor (for professional coding)",
+                        mediasite_id: "4ef780a3a9ba44208926bcd04ed5b6181d"
+                    },
+                    {
+                        title: "TCP client: opening a connection",
+                        mediasite_id: "152f7eabdaee4194bdfd4f01eb5d31291d"
+                    },
+                    {
+                        title: "Sending and receiving data",
+                        mediasite_id: "ca3a1c7010054542b87deb53f1b968031d"
+                    },
+                    {
+                        title: "Reading one line of text from the socket",
+                        mediasite_id: "a433e250fdfb4a48b8e8448282a4bb3c1d"
+                    },
+                    {
+                        title: "Creating a TCP server",
+                        mediasite_id: "35527d077b1149a48e4db6e757cdc7531d"
+                    },
+                    {
+                        title: "Reading one line on the server",
+                        mediasite_id: "293518c6d4c3445e9af72d26a51c01971d"
+                    },
+                    {
+                        title: "Multi-threaded server",
+                        mediasite_id: "febf2b170b274b039b00a028462cde371d"
+                    }
+                ]
+            },
+        ],
+        content: [
+            {
+                title: "Socket programming",
+                items: [
+                    "Connection establishment in TCP, three-way handshake",
+                    "Socket API - cross-platform abstraction for network programming",
+                    "Multi-threaded programming - why do we need it, what does it mean",
+                    "Practical TCP socket programming in a language of your choice"
+                ]
+            },
+        ],
+        slides: [
+            {
+                title: "Socket programming",
+                file: "Lecture%2006%20Socket%20programming.pdf"
+            },
+        ],
+        exercises: null,
+        book_chapters: {
+            kurose: ["beginning og 2.7", "2.7.2"],
+            hallsteinsen: ["Vedlegg B"]
+        },
+        links: [
+            {
+                text: "Kahoot: repetition of material from week 5",
+                url: "https://create.kahoot.it/share/dk-20-5-web/4b2b6a9a-d1ef-4036-a909-4f388c597055"
+            }
+        ]
+    }, // EOF Week 6
+
 ];
 
 // Use this variable find out the current week, numbering starts at 1 (not at 0)
