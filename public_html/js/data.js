@@ -565,6 +565,10 @@ const weeks = [
                     {
                         title: "HTTP traffic analysis with Wireshark and Chrome Dev Tools",
                         mediasite_id: "0c40adbf2b6547a1b2f67a67a5320b171d"
+                    },
+                    {
+                        title: "More website analysis with dev tools",
+                        mediasite_id: "67f6dd7d6a4140eb89a404edfd78bc8d1d"
                     }
                 ]
             },
