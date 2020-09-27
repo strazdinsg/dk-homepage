@@ -798,9 +798,108 @@ const weeks = [
             {
                 text: "Kahoot: repetition of material from week 5",
                 url: "https://create.kahoot.it/share/dk-20-5-web/4b2b6a9a-d1ef-4036-a909-4f388c597055"
+            },
+            {
+                text: "Socket programming examples in Python, source code",
+                url: "https://github.com/strazdinsg/datakomm-tools/tree/master/PythonSockets"
             }
         ]
     }, // EOF Week 6
+
+
+    //////////////////////
+    // Week 7
+    //////////////////////
+    {
+        topic: "Network programming, Part 2",
+        description: "We discuss two topics: UDP socket programming and data marshalling (how to serialize data for transmission).",
+        // Used to separate the videos into modules
+        modules: [
+            {
+                name: "Socket programming, part 2",
+                videos: [
+                    {
+                        title: "Intro, UDP programming",
+                        mediasite_id: "cccd63104d594e678d404c85d84850a61d"
+                    },
+                    {
+                        title: "UDP sockets in Java",
+                        mediasite_id: "dbfcadfa8a45480490e98cdc555374221d"
+                    },
+                    {
+                        title: "UDP sockets in Python",
+                        mediasite_id: "a8861c08cf9143e1a512b56d320066ca1d"
+                    },
+                    {
+                        title: "Data marshalling - the problem",
+                        mediasite_id: "f79f006ab8a643acb2e384deac60f1ae1d"
+                    },
+                    {
+                        title: "Fixed size messages",
+                        mediasite_id: "a7c95db58d2a4742921e5ecac054b8ee1d"
+                    },
+                    {
+                        title: "FSM exercise - a solution",
+                        mediasite_id: "7c21046149614b018264abf81b80ab121d"
+                    },
+                    {
+                        title: "Message separators",
+                        mediasite_id: "0381d7ec26ba4c3ca9035b036c9514841d"
+                    },
+                    {
+                        title: "Type-Length-Value",
+                        mediasite_id: "ec0e112c97b8445ab1cfbc50726611701d"
+                    },
+                    {
+                        title: "Side note: encoding numbers as strings and binary",
+                        mediasite_id: "1e521c5dab19405593ebdd252638d26e1d"
+                    },
+                    {
+                        title: "JSON, XML (in UDP or HTTP)",
+                        mediasite_id: "a60655e00f5a4d558275f1054191445d1d"
+                    },
+                    {
+                        title: "Google Protocol Buffers",
+                        mediasite_id: "a2c86289ae3b43baa10c04e69d5f6e801d"
+                    },
+                ]
+            }
+        ],
+        content: [
+            {
+                title: "Socket programming with UDP",
+                items: []
+            },
+            {
+                title: "Data marshalling",
+                items: [
+                    "The problem and motivation: WHY and HOW?",
+                    "Encoding data in fixed-size messages",
+                    "Using message separators",
+                    "Type-Length-Value approach",
+                    "Encoding objects in HTTP responses, using JSON for serialization",
+                    "Advantages to use custom binary protocols"
+                ]
+            },
+        ],
+        slides: [
+            {
+                title: "Socket programming, Part 2",
+                file: "Lecture%2007%20Socket%20programming%202.pdf"
+            },
+        ],
+        exercises: "Exercises%20for%20Lecture%207.pdf",
+        book_chapters: {
+            kurose: [],
+            hallsteinsen: []
+        },
+        links: [
+            {
+                text: "Socket programming examples in Python, source code",
+                url: "https://github.com/strazdinsg/datakomm-tools/tree/master/PythonSockets"
+            }
+        ]
+    }, // EOF Week 7
 
 ];
 
