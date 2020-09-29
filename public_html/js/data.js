@@ -890,7 +890,7 @@ const weeks = [
         ],
         exercises: "Exercises%20for%20Lecture%207.pdf",
         book_chapters: {
-            kurose: [],
+            kurose: ["beginning of 2.7", "2.7.1"],
             hallsteinsen: []
         },
         links: [
