@@ -768,6 +768,10 @@ const weeks = [
                     {
                         title: "Multi-threaded server",
                         mediasite_id: "febf2b170b274b039b00a028462cde371d"
+                    },
+                    {
+                        title: "Global variables",
+                        mediasite_id: "93eb8041045e47bb85f513328436c33b1d"
                     }
                 ]
             },
@@ -901,6 +905,119 @@ const weeks = [
         ]
     }, // EOF Week 7
 
+    //////////////////////
+    // Week 8
+    //////////////////////
+    {
+        topic: "High-level Network programming",
+        description: "We discuss how higher-level programming abstractions are built. We also take a look at a couple of (currently) popular ways to program network applications: REST API, WebSockets, MQTT, Modbus.",
+        // Used to separate the videos into modules
+        modules: [
+            {
+                name: "High-level network programming",
+                videos: [
+                    {
+                        title: "Protocol reuse",
+                        mediasite_id: "b0a82571104e474ca45a27e2aa4d91791d"
+                    },
+                    {
+                        title: "Web services, REST",
+                        mediasite_id: "835c6c4bd8374d8094bd9ce27efcfaa11d"
+                    },
+                    {
+                        title: "Websocket: motivation",
+                        mediasite_id: "d66202e4a85842abb864b3613a5874281d"
+                    },
+                    {
+                        title: "Websocket: idea",
+                        mediasite_id: "1b833ce239f34660b6cc53bd62e2736d1d"
+                    },
+                    {
+                        title: "Websocket: protocol",
+                        mediasite_id: "b46c8bb07b93400a9c4f94a2d36cff281d"
+                    },
+                    {
+                        title: "Websocket: debugging",
+                        mediasite_id: "9a57b1d31e3d406eb529afc9c72619b01d"
+                    },
+                    {
+                        title: "Websocket: programming",
+                        mediasite_id: "946727cd154b4e6f9c0b166c977d9c691d"
+                    },
+                    {
+                        title: "Messaging, MQTT",
+                        mediasite_id: "3bdfbd7ba8184b34892e76c683ff960d1d"
+                    },
+                    {
+                        title: "Industrial buses, ModBus",
+                        mediasite_id: "dd946b1008344cc89a4053ad89d0dc391d"
+                    },
+                ]
+            }
+        ],
+        content: [
+            {
+                title: "Protocol reuse and creating higher-level programming abstractions",
+                items: []
+            },
+            {
+                title: "WebSockets",
+                items: [
+                    "Why were WebSockets created?",
+                    "How do they work?",
+                ]
+            },
+            {
+                title: "WebServices, REST - general idea",
+                items: []
+            },
+            {
+                title: "Publish-subscribe messaging, MQTT as one example",
+                items: []
+            },
+            {
+                title: "Industrial buses, ModBus as one example",
+                items: []
+            },
+        ],
+        slides: [
+            {
+                title: "High-level network programming",
+                file: "Lecture%2008%20High-level%20net%20prog.pdf"
+            },
+        ],
+        exercises: "Exercises%20for%20Lecture%208.pdf",
+        book_chapters: {
+            kurose: [],
+            hallsteinsen: []
+        },
+        links: [
+            {
+                text: "REST API client in Python",
+                url: "https://realpython.com/api-integration-in-python/"
+            },
+            {
+                text: "REST API client in Java",
+                url: "https://github.com/strazdinsg/datakomm-tools/tree/master/REST-examples"
+            },
+            {
+                text: "WebSocket protocol description, RFC 6455",
+                url: "https://tools.ietf.org/html/rfc6455"
+            },
+            {
+                text: "WebSocket demo in Javascript",
+                url: "https://www.websocket.org/echo.html"
+            },
+            {
+                text: "Summary of MQTT protocol",
+                url: "https://www.wikipendium.no/ID203012_Computer_Networks_and_network_programming#mqtt"
+            },
+            {
+                text: "ModBus programming example in Java",
+                url: "https://github.com/strazdinsg/datakomm-tools/tree/master/ModBusTest"
+            },
+        ]
+    }, // EOF Week 8
 ];
 
 // Use this variable find out the current week, numbering starts at 1 (not at 0)
