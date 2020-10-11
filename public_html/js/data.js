@@ -1018,6 +1018,118 @@ const weeks = [
             },
         ]
     }, // EOF Week 8
+
+    //////////////////////
+    // Week 9
+    //////////////////////
+    {
+        topic: "Transport layer",
+        description: "This week we look at the transport layer. We discuss general principles first: multiplexing, reliable data transfer, pipelined transport. Then we discuss the two transport-layer protocols in the Internet: TCP and UDP.",
+        // Used to separate the videos into modules
+        modules: [
+            {
+                name: "Transport layer concepts and UDP protocol",
+                videos: [
+                    {
+                        title: "Transport layer introduction",
+                        mediasite_id: "b475d797a560469bab5639caa2536a5b1d"
+                    },
+                    {
+                        title: "Multiplexing, ports",
+                        mediasite_id: "dbd34a6e29604200874ca18f068ac78a1d"
+                    },
+                    {
+                        title: "Reliable transfer",
+                        mediasite_id: "c249774be2174bdeba43e6a4f49410a01d"
+                    },
+                    {
+                        title: "Pipelined transport",
+                        mediasite_id: "670d5464882b4eee8f24ecf758cf63ea1d"
+                    },
+                    {
+                        title: "UDP protocol",
+                        mediasite_id: "d687ef9c51884174bf99a3de62add2c21d"
+                    },
+                ]
+            },
+            {
+                name: "TCP protocol",
+                videos: [
+                    {
+                        title: "TCP Introduction",
+                        mediasite_id: "a4279f5bb180459e9ce6fb336c5739881d"
+                    },
+                    {
+                        title: "Reliable transfer in TCP",
+                        mediasite_id: "02214e4735a64d5fa73d863e584c08ea1d"
+                    },
+                    {
+                        title: "Flow control in TCP",
+                        mediasite_id: "e07f2cd064424466aaa6f3a0eb433fff1d"
+                    },
+                    {
+                        title: "Congestion control idea",
+                        mediasite_id: "b63a0ce6afe1476fb759a701d3175e8b1d"
+                    },
+                    {
+                        title: "Congestion control in TCP",
+                        mediasite_id: "5bbf1b52b1f74d80ab679e56b840d94f1d"
+                    },
+                    {
+                        title: "TCP always loses packets; Summary of the lecture",
+                        mediasite_id: "67f4967b1ef2408d8ed832b6926081281d"
+                    },
+                ]
+            },
+            {
+                name: "TCP Exercise walkthrough",
+                videos: [
+                    {
+                        title: "Walkthrough for Week 9 exercises",
+                        mediasite_id: "e9ad5ce98a3444fbb8b0070b330426af1d"
+                    },
+                ]
+            },
+        ],
+        content: [
+            {
+                title: "Transport layer protocols",
+                items: [
+                    "The goal of transport layer",
+                    "Service addressing (multiplexing)",
+                    "Concepts necessary for reliable data transfer: acknowledgements, timeouts, retransmission, error detection, sequence numbers",
+                    "Pipelined transport",
+                ]
+            },
+            {
+                title: "UDP protocol",
+                items: []
+            },
+            {
+                title: "TCP protocol",
+                items: [
+                    "Opening and closing connections",
+                    "Reliable transfer with TCP",
+                    "Flow control",
+                    "Congestion control",
+                    "Analysis of TCP segment headers in Wireshark"
+                ]
+            },
+        ],
+        slides: [
+            {
+                title: "Transport layer",
+                file: "Lecture%2009%20Transport%20layer.pdf"
+            },
+        ],
+        exercises: "Exercises%20for%20Lecture%209.pdf",
+        book_chapters: {
+            // TODO
+            kurose: [],
+            hallsteinsen: []
+        },
+        links: null
+    }, // EOF Week 9
 ];
 
 // Use this variable find out the current week, numbering starts at 1 (not at 0)
