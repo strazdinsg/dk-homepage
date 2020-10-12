@@ -1124,9 +1124,8 @@ const weeks = [
         ],
         exercises: "Exercises%20for%20Lecture%209.pdf",
         book_chapters: {
-            // TODO
-            kurose: [],
-            hallsteinsen: []
+            kurose: ["Chapter 3"],
+            hallsteinsen: ["Chapter 4"]
         },
         links: null
     }, // EOF Week 9
