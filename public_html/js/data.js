@@ -1060,6 +1060,10 @@ const weeks = [
                         mediasite_id: "a4279f5bb180459e9ce6fb336c5739881d"
                     },
                     {
+                        title: "Opening and closing TCP connections",
+                        mediasite_id: "4f54377772af405390f88bcd0cd9bc5c1d"
+                    },
+                    {
                         title: "Reliable transfer in TCP",
                         mediasite_id: "02214e4735a64d5fa73d863e584c08ea1d"
                     },
