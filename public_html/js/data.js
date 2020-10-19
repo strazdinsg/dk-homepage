@@ -1133,6 +1133,128 @@ const weeks = [
         },
         links: null
     }, // EOF Week 9
+
+    //////////////////////
+    // Week 10
+    //////////////////////
+    {
+        topic: "Network layer",
+        description: "This week we look at the network layer. We start with introduction - what happens in network layer? Then we look a bit into the mystical creatures called 'routers'. Then we analyze the IP protocol, including the new version IPv6. Then a short intro to routing - how does it work? We finish with discussing 'small but important' tools in the network layer: DHCP protocol for address auto-configuration, Network Address Translation and ICMP for debugging.",
+        // Used to separate the videos into modules
+        modules: [
+            {
+                name: "Network layer",
+                videos: [
+                    {
+                        title: "Network layer intro",
+                        mediasite_id: "2418c90d6e7b4b7a9ff3294af9ffc7c51d"
+                    },
+                    {
+                        title: "Routers",
+                        mediasite_id: "a048e6d3738d4f5ba178c567a495f37c1d"
+                    },
+                    {
+                        title: "IP datagram format",
+                        mediasite_id: "1a498858491f422c85ec922f9f7aa9a81d"
+                    },
+                    {
+                        title: "IP addressing",
+                        mediasite_id: "9fe6f052bc484a30a098731406d6bff31d"
+                    },
+                    {
+                        title: "IPv6",
+                        mediasite_id: "a7937cdb232148f3ad2885eb2e9298ab1d"
+                    },
+                    {
+                        title: "Routing",
+                        mediasite_id: "e97391848abc4987afe60b6563c63b601d"
+                    },
+                    {
+                        title: "Routing in the Internet",
+                        mediasite_id: "8d39432bd82d467c9c76e32c673f61431d"
+                    },
+                    {
+                        title: "DHCP",
+                        mediasite_id: "f3941967df234c908a8855012eb936601d"
+                    },
+                    {
+                        title: "NAT",
+                        mediasite_id: "6e10d87ab8f84e508828bd6770963c8d1d"
+                    },
+                    {
+                        title: "Debugging with ICMP",
+                        mediasite_id: "e87b43747e69403ca210cbeccf3467de1d"
+                    },
+                    {
+                        title: "Summary",
+                        mediasite_id: "bd50237de9f2485bb8ca56499188db711d"
+                    },
+                ]
+            }
+        ],
+        content: [
+            {
+                title: "Responsibility of network layer",
+                items: [
+                    "Routing and forwarding",
+                    "Global addressing",
+                ]
+            },
+            {
+                title: "What's inside a router?",
+                items: []
+            },
+            {
+                title: "IP protocol",
+                items: [
+                    "Responsibility",
+                    "IP datagram format - the main concepts",
+                    "IPv6",
+                    "IP addresses and hierarchy of IP networks",
+                ]
+            },
+            {
+                title: "Routing",
+                items: ["General principles", "Basics of routing in the Internet, autonomous systems"]
+            },
+            {
+                title: "Support-tools in the network layer",
+                items: [
+                    "DHCP for IP address auto-configuration",
+                    "Network Address Translation (NAT)",
+                    "ICMP for debugging (Ping, traceroute)"
+                ]
+            },
+        ],
+        slides: [
+            {
+                title: "Network layer",
+                file: "Lecture%2010%20Network%20layer.pdf"
+            },
+        ],
+        exercises: "Exercises%20for%20Lecture%210.pdf",
+        book_chapters: {
+            kurose: [
+                "4.1 (Network layer introduction)",
+                "4.2 (Routers)",
+                "4.3 (IP protocol)",
+                "4.3.3 (DHCP)",
+                "4.3.4 (NAT)",
+                "5.1 and 5.2 (Routing introduction)",
+                "5.6 (ICMP)"
+            ],
+            hallsteinsen: [
+                "5.1 (Network layer introduction)",
+                "5.9 (Routers)",
+                "5.3-5.7 and 10.3.2 (IP protocol)",
+                "8.14 (DHCP)",
+                "8.1.6 (NAT)",
+                "10.4 (Routing introduction)",
+                "5.8 (ICMP)"
+            ]
+        },
+        links: null
+    }, // EOF Week 10
 ];
 
 // Use this variable find out the current week, numbering starts at 1 (not at 0)
