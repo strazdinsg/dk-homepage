@@ -1255,6 +1255,179 @@ const weeks = [
         },
         links: null
     }, // EOF Week 10
+
+    //////////////////////
+    // Week 11
+    //////////////////////
+    {
+        topic: "Link layer",
+        description: "This week we look at the link layer. We start with introduction - what happens in link layer? Then we look at the problem of sharing transmission medium and how that can be solved with MAC protocols. Then we discuss principles of error detection and some examples. Then we look at transmission of data within local area network (LAN) and how packets are moved from one LAN to another. We finish by looking at Ethernet and link-layer switches. In the end we go through a case study called \"Retrospective\" in the English book. It summarizes a lot of theory we have went through in the course. This is an important part you can use for repetition.",
+        // Used to separate the videos into modules
+        modules: [
+            {
+                name: "Link layer Part 1 - Intro, MAC protocols",
+                videos: [
+                    {
+                        title: "Link layer introduction",
+                        mediasite_id: "8ac740b26ffd4be089c85d21b95c8c521d"
+                    },
+                    {
+                        title: "Multiple Access Control (MAC) protocols",
+                        mediasite_id: "63282b608886452ea3f5433b8313a6141d"
+                    },
+                    {
+                        title: "Channel partitioning protocols",
+                        mediasite_id: "272a2ad9722c40b2af466dc8f4bd897c1d"
+                    },
+                    {
+                        title: "Taking turns protocols",
+                        mediasite_id: "5f548555f350402299ae2658d7cb18a61d"
+                    },
+                    {
+                        title: "Random access protocols",
+                        mediasite_id: "d9b4c8c7a1394b1da8c4624d145f77881d"
+                    },
+                ]
+            },
+            {
+                name: "Error detection",
+                videos: [
+                    {
+                        title: "Error detection principles",
+                        mediasite_id: "b6ed6298f1944ce192d9e7f91e24155d1d"
+                    },
+                    {
+                        title: "Bit parity check",
+                        mediasite_id: "c44fb4b847a24cf68860017f511c41791d"
+                    },
+                    {
+                        title: "Checksums",
+                        mediasite_id: "d1ef92034ed7413186a2b7adbf2b728d1d"
+                    },
+                    {
+                        title: "Cyclic Redundancy Check (CRC)",
+                        mediasite_id: "fddebe75fa5b45c993d6358a6807e8891d"
+                    },
+                ]
+            },
+            {
+                name: "Data transmission within LAN and cross-LANs",
+                videos: [
+                    {
+                        title: "Local Area Networks",
+                        mediasite_id: "71227f5ce21446559a05c510704061ac1d"
+                    },
+                    {
+                        title: "MAC addresses",
+                        mediasite_id: "ce073d77c4174e628502f2eca30a19e01d"
+                    },
+                    {
+                        title: "Address Resolution Protocol (ARP)",
+                        mediasite_id: "aa871c6d23bb45ceb58d2078d7d5fa021d"
+                    },
+                    {
+                        title: "Forwarding packets to another LAN",
+                        mediasite_id: "bfdb5dbdc5984285b23829ad7303fefe1d"
+                    },
+                ]
+            },
+            {
+                name: "Ethernet and Switches",
+                videos: [
+                    {
+                        title: "Ethernet",
+                        mediasite_id: "9e9ff8e3e38a4e4c8dd1ad7818b37a211d"
+                    },
+                    {
+                        title: "Link-layer switches",
+                        mediasite_id: "3f03811dec9a4d17b36f1ca3b18f0ed21d"
+                    },
+                    {
+                        title: "Self-learning for switches",
+                        mediasite_id: "e35f51d8d58d47b5b070584725b053421d"
+                    },
+                    {
+                        title: "Typical institutional networks",
+                        mediasite_id: "37e590433ea3476197972de769d6a9431d"
+                    },
+                    {
+                        title: "Switches VS routers",
+                        mediasite_id: "771ca9bf05124fa79299c0772ccc8c081d"
+                    },
+                ]
+            },
+            {
+                name: "Retrospective",
+                videos: [
+                    {
+                        title: "Retrospective",
+                        mediasite_id: "26b2e19a460642febf018fd3aa9a58901d"
+                    },
+                ]
+            },
+        ],
+        content: [
+            {
+                title: "Responsibility of link layer",
+                items: [
+                ]
+            },
+            {
+                title: "MAC protocols",
+                items: ["What is their purpose", "Main types of MAC protocols, their principles"]
+            },
+            {
+                title: "Error detection",
+                items: [
+                    "Principles and limitations",
+                    "Typical examples: parity check, checksums, CRC"
+                ]
+            },
+            {
+                title: "Data transmission within local-area-networks (LAN)",
+                items: ["Concept of LAN", "Link-layer addresses for transmission within LAN", "Address resolution protocol (ARP)", "Data transmission across LANs"]
+            },
+            {
+                title: "Link-layer switches",
+                items: [
+                    "Principles of operation (transparency)",
+                    "Self-learning principles",
+                    "Switches VS routers"
+                ]
+            },
+        ],
+        slides: [
+            {
+                title: "Link layer",
+                file: "Lecture%2011%20Link%20layer.pdf"
+            },
+            {
+                title: "Retrospective PPTX (with animations)",
+                file: "Retrospective.pptx"
+            }
+        ],
+        exercises: "Exercises%20for%20Lecture%211.pdf",
+        book_chapters: {
+            kurose: [
+                "6.1 (Link layer introduction)",
+                "6.2 (Error detection)",
+                "6.3 (Sharing of media, MAC protocols)",
+                "6.4.1 (Local networks, MAC addresses, ARP protocol)",
+                "6.4.2 (Ethernet)",
+                "6.4.3 (Link-layer switches)",
+                "6.7 (Retrospective)",
+            ],
+            hallsteinsen: [
+                "4.6 (Error detection)",
+                "6.1 and 6.2 (Link layer introduction)",
+                "6.3.1 and 6.3.3 (Sharing of media, MAC protocols)",
+                "6.3.4, 6.4, 7.2.7 (Local networks, MAC addresses, ARP protocol)",
+                "7.2 (Ethernet)",
+                "7.2.3 (Link-layer switches)",
+            ]
+        },
+        links: null
+    }, // EOF Week 11
 ];
 
 // Use this variable find out the current week, numbering starts at 1 (not at 0)
