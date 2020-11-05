@@ -1428,6 +1428,121 @@ const weeks = [
         },
         links: null
     }, // EOF Week 11
+
+    //////////////////////
+    // Week 13
+    //////////////////////
+    {
+        topic: "Security in computer networks",
+        description: "This week we touch the surface of different security aspects related to computer communication. One big part of it is cryptography. Other aspects are discussed, including WiFi security and Virtual Private networks (VPNs). We just touch the general principle without going into details.",
+        // Used to separate the videos into modules
+        modules: [
+            {
+                name: "Security in computer networks",
+                videos: [
+                    {
+                        title: "Introduction, the four security aspects",
+                        mediasite_id: "6525c35b0986410b8ed3c996e23ec0161d"
+                    },
+                    {
+                        title: "Cryptography principles",
+                        mediasite_id: "9074e94cb9fd439d95b2b9f5dfdda3b51d"
+                    },
+                    {
+                        title: "Symmetric key cryptography",
+                        mediasite_id: "5bffe1f4c23d4540bf494aa9a4e9c48b1d"
+                    },
+                    {
+                        title: "Block ciphers",
+                        mediasite_id: "656dda79e0d44962ba0e41dce4f5ec481d"
+                    },
+                    {
+                        title: "Public key cryptography",
+                        mediasite_id: "7aea568f35c446b9acf5871537be5d561d"
+                    },
+                    {
+                        title: "Public key cryptography continued",
+                        mediasite_id: "fa6f2d21098c4e849eacf1bf5b16be5a1d"
+                    },
+                    {
+                        title: "Digital signatures",
+                        mediasite_id: "2e9425b935af4ef6aa27f23a8ca09ff61d"
+                    },
+                    {
+                        title: "Key certification",
+                        mediasite_id: "354a0c0d5711469cad22f317835b56071d"
+                    },
+                    {
+                        title: "Secure Sockets Layer (SSL)",
+                        mediasite_id: "ee3e94b2ed42441abafcbfe7a62d97a31d"
+                    },
+                    {
+                        title: "WiFi security",
+                        mediasite_id: "10bb4c57191d4ec0afcb418f63ba5e9c1d"
+                    },
+                    {
+                        title: "Virtual Private Networks (VPN)",
+                        mediasite_id: "934a980af715445e85f13dbbce79003d1d"
+                    }
+                ]
+            }
+        ],
+        content: [
+            {
+                title: "Security in computer networks",
+                items: []
+            },
+            {
+                title: "Four security aspects",
+                items: ["Confidentiality", "Authenticity", "Integrity", "Operational stability"]
+            },
+            {
+                title: "Cryptography",
+                items: ["General principles", "Symmetric key cryptography principles", "Public key encryption"]
+            },
+            {
+                title: "Digital signatures",
+                items: []
+            },
+            {
+                title: "Public key certification",
+                items: []
+            },
+            {
+                title: "Secure Socket Layer (SSL) - general principles",
+                items: []
+            },
+            {
+                title: "Wireless network (WiFi) security",
+                items: []
+            },
+            {
+                title: "Virtual Private Networks (VPN)",
+                items: []
+            },
+        ],
+        slides: [
+            {
+                title: "Network security",
+                file: "Lecture%2013%20Security.pdf"
+            }
+        ],
+        exercises: null,
+        book_chapters: {
+            kurose: [
+                "8.1 (Four security aspects)",
+                "8.2.1 (Cryptography)",
+                "8.2.2 (Public-key cryptography)",
+                "8.3 (Message signatures)",
+                "8.6 (SSL)",
+                "8.7 (VPN)",
+                "8.7.1 (Securing Wireless LANs)",
+            ],
+            hallsteinsen: []
+        },
+        links: null
+    }, // EOF Week 13
+
 ];
 
 // Use this variable find out the current week, numbering starts at 1 (not at 0)
