@@ -1445,6 +1445,10 @@ const weeks = [
                         mediasite_id: "6525c35b0986410b8ed3c996e23ec0161d"
                     },
                     {
+                        title: "Husk å svare på studiebarometeret! (se lenke i eposten fra NOKUT)",
+                        youtube_id: "IF0k3z6u8Jg"
+                    },
+                    {
                         title: "Cryptography principles",
                         mediasite_id: "9074e94cb9fd439d95b2b9f5dfdda3b51d"
                     },
