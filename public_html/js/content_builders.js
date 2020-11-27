@@ -93,10 +93,12 @@ function printWeekMaterials(weekNr, parentNode) {
     parentNode.appendChild(heading);
     const listNode = document.createElement("ul");
     listNode.appendChild(createVideoLinksForWeek(weekNr));
-    const slideNode = document.createElement("li");
     const week = weeks[weekNr - 1];
-    slideNode.innerHTML = createSlideLinkContent(week.slides);
-    listNode.appendChild(slideNode);
+    if (week.slides !== null && week.slides.length >= 1) {
+        const slideNode = document.createElement("li");
+        slideNode.innerHTML = createSlideLinkContent(week.slides);
+        listNode.appendChild(slideNode);
+    }
     if (week.exercises) {
         const exerciseNode = document.createElement("li");
         exerciseNode.innerHTML = "<a href='exercises/" + week.exercises + "'>Exercises</a>";
