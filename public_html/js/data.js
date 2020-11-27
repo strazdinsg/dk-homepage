@@ -1430,7 +1430,7 @@ const weeks = [
     }, // EOF Week 11
 
     //////////////////////
-    // Week 13
+    // Week 12
     //////////////////////
     {
         topic: "Security in computer networks",
@@ -1545,7 +1545,52 @@ const weeks = [
             hallsteinsen: []
         },
         links: null
-    }, // EOF Week 13
+    }, // EOF Week 12
+
+    //////////////////////
+    // Week 13
+    //////////////////////
+    {
+        topic: "Questions and Answers",
+        description: "Here are answers to some student questions",
+        // Used to separate the videos into modules
+        modules: [
+            {
+                name: "Q&A",
+                videos: [
+                    {
+                        title: "Part 1: Ports on routers, Local IPs, VPN, MAC for custom PCs",
+                        mediasite_id: "2d97e696c0a0488e94eb7833de8c97641d"
+                    },
+                ]
+            }
+        ],
+        content: [
+            {
+                title: "Ports on routers",
+                items: []
+            },
+            {
+                title: "How come me and my friend get the same IP?",
+                items: []
+            },
+            {
+                title: "VPN - which layer is it?",
+                items: []
+            },
+            {
+                title: "MAC address for custom-build PCs",
+                items: []
+            },
+        ],
+        slides: [],
+        exercises: null,
+        book_chapters: {
+            kurose: [],
+            hallsteinsen: []
+        },
+        links: null
+    }, // EOF Week 14
 
 ];
 
