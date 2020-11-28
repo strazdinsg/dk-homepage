@@ -82,7 +82,12 @@ const weeks = [
                 ]
             },
         ],
-        exercises: "Exercises%20for%20Lecture%201.pdf",
+        exercises: [
+            {
+                title: "Exercises",
+                file: "Exercises%20for%20Lecture%201.pdf"
+            }
+        ],
         slides: [
             {
                 title: "Course introduction",
@@ -226,7 +231,12 @@ const weeks = [
                 file: "Lecture%2002%20Fundamentals.pdf"
             },
         ],
-        exercises: "Exercises%20for%20Lecture%202.pdf",
+        exercises: [
+            {
+                title: "Exercises",
+                file: "Exercises%20for%20Lecture%202.pdf"
+            }
+        ],
         book_chapters: {
             kurose: [
                 "1.1.1 (Nuts and bolts)",
@@ -326,7 +336,12 @@ const weeks = [
                 file: "Lecture%2003%20Physical%20layer.pdf"
             },
         ],
-        exercises: "Exercises%20for%20Lecture%203.pdf",
+        exercises: [
+            {
+                title: "Exercises",
+                file: "Exercises%20for%20Lecture%203.pdf"
+            }
+        ],
         book_chapters: {
             kurose: [
                 "1.2.2 (Physical media)"
@@ -483,7 +498,12 @@ const weeks = [
                 file: "Lecture%2004-3%20DNS.pdf"
             }
         ],
-        exercises: "Exercises%20for%20Lecture%204.pdf",
+        exercises: [
+            {
+                title: "Exercises",
+                file: "Exercises%20for%20Lecture%204.pdf"
+            }
+        ],
         book_chapters: {
             kurose: [
                 "beginning of 2 and 2.1, 2.1.5 (Application layer)",
@@ -614,7 +634,12 @@ const weeks = [
                 file: "Lecture%2005%20Web.pdf"
             },
         ],
-        exercises: "Exercises%20for%20Lecture%205.pdf",
+        exercises: [
+            {
+                title: "Exercises",
+                file: "Exercises%20for%20Lecture%205.pdf"
+            }
+        ],
         book_chapters: {
             kurose: [
                 "2.2"
@@ -793,7 +818,7 @@ const weeks = [
                 file: "Lecture%2006%20Socket%20programming.pdf"
             },
         ],
-        exercises: null,
+        exercises: [],
         book_chapters: {
             kurose: ["beginning og 2.7", "2.7.2"],
             hallsteinsen: ["Vedlegg B"]
@@ -892,7 +917,12 @@ const weeks = [
                 file: "Lecture%2007%20Socket%20programming%202.pdf"
             },
         ],
-        exercises: "Exercises%20for%20Lecture%207.pdf",
+        exercises: [
+            {
+                title: "Exercises",
+                file: "Exercises%20for%20Lecture%207.pdf"
+            }
+        ],
         book_chapters: {
             kurose: ["beginning of 2.7", "2.7.1"],
             hallsteinsen: []
@@ -986,7 +1016,12 @@ const weeks = [
                 file: "Lecture%2008%20High-level%20net%20prog.pdf"
             },
         ],
-        exercises: "Exercises%20for%20Lecture%208.pdf",
+        exercises: [
+            {
+                title: "Exercises",
+                file: "Exercises%20for%20Lecture%208.pdf"
+            }
+        ],
         book_chapters: {
             kurose: [],
             hallsteinsen: []
@@ -1126,7 +1161,12 @@ const weeks = [
                 file: "Lecture%2009%20Transport%20layer.pdf"
             },
         ],
-        exercises: "Exercises%20for%20Lecture%209.pdf",
+        exercises: [
+            {
+                title: "Exercises",
+                file: "Exercises%20for%20Lecture%209.pdf"
+            }
+        ],
         book_chapters: {
             kurose: ["Chapter 3"],
             hallsteinsen: ["Chapter 4"]
@@ -1232,7 +1272,7 @@ const weeks = [
                 file: "Lecture%2010%20Network%20layer.pdf"
             },
         ],
-        exercises: "Exercises%20for%20Lecture%210.pdf",
+        exercises: [],
         book_chapters: {
             kurose: [
                 "4.1 (Network layer introduction)",
@@ -1369,8 +1409,7 @@ const weeks = [
         content: [
             {
                 title: "Responsibility of link layer",
-                items: [
-                ]
+                items: []
             },
             {
                 title: "MAC protocols",
@@ -1406,7 +1445,7 @@ const weeks = [
                 file: "Retrospective.pptx"
             }
         ],
-        exercises: "Exercises%20for%20Lecture%211.pdf",
+        exercises: [],
         book_chapters: {
             kurose: [
                 "6.1 (Link layer introduction)",
@@ -1531,7 +1570,7 @@ const weeks = [
                 file: "Lecture%2013%20Security.pdf"
             }
         ],
-        exercises: null,
+        exercises: [],
         book_chapters: {
             kurose: [
                 "8.1 (Four security aspects)",
@@ -1598,7 +1637,16 @@ const weeks = [
             },
         ],
         slides: [],
-        exercises: null,
+        exercises: [
+            {
+                title: "Solutions for Week 4 exercises - Protocols",
+                file: "Exercises%20for%20Lecture%204%20-%20Protocols%20-%20SOLUTIONS.pdf"
+            },
+            {
+                title: "Solutions for Week 3 exercises - Physical layer",
+                file: "Exercises%20for%20Lecture%203%20-%20Physical%20layer%20-%20SOLUTIONS.pdf"
+            },
+        ],
         book_chapters: {
             kurose: [],
             hallsteinsen: []

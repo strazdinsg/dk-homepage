@@ -99,9 +99,9 @@ function printWeekMaterials(weekNr, parentNode) {
         slideNode.innerHTML = createSlideLinkContent(week.slides);
         listNode.appendChild(slideNode);
     }
-    if (week.exercises) {
+    if (week.exercises && week.exercises.length >= 1) {
         const exerciseNode = document.createElement("li");
-        exerciseNode.innerHTML = "<a href='exercises/" + week.exercises + "'>Exercises</a>";
+        exerciseNode.innerHTML = createExerciseLinkContent(week.exercises);
         listNode.appendChild(exerciseNode);
     }
     if (week.book_chapters.kurose.length > 0 || week.book_chapters.hallsteinsen.length > 0) {
@@ -136,6 +136,40 @@ function createSlideLinkContent(slides) {
     }
     return s;
 }
+
+/**
+ * Create exercise links
+ * @param {array|string} exercises Array containing exercise information; or a simple string containing relative
+ * link to exercise file
+ * @return {string} String to be placed inside a slide node
+ */
+function createExerciseLinkContent(exercises) {
+    return createMaterialLinkContent(exercises, "Exercises", "exercises");
+}
+
+/**
+ * Create learning material (slides, exercises, ...) links
+ * @param {array|string} materials Array containing material information; or a simple string containing relative
+ * link to a file
+ * @param {string} caption A caption for the materials
+ * @param {string} baseUrl A base URL of the material folder
+ * @return {string} String to be placed inside a material node
+ */
+function createMaterialLinkContent(materials, caption, baseUrl) {
+    let e = "";
+    if (materials.length > 1) {
+        e = caption + ": <ul>";
+        materials.forEach(m => {
+            e += "<li><a href='" + baseUrl + "/" + m.file + "'>" + m.title + "</a></li>"
+        });
+        e += "</ul>";
+    } else {
+        e = "<a href='" + baseUrl + "/" + materials[0].file + "'>" + caption + "</a>";
+    }
+    return e;
+}
+
+
 
 /**
  * Create related book chapter content
