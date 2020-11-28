@@ -1642,10 +1642,10 @@ const weeks = [
                 title: "Solutions for Week 4 exercises - Protocols",
                 file: "Exercises%20for%20Lecture%204%20-%20Protocols%20-%20SOLUTIONS.pdf"
             },
-            // {
-            //     title: "Solutions for Week 3 exercises - Physical layer",
-            //     file: "Exercises%20for%20Lecture%203%20-%20Physical%20layer%20-%20SOLUTIONS.pdf"
-            // },
+            {
+                title: "Solutions for Week 3 exercises - Physical layer",
+                file: "Exercises%20for%20Lecture%203%20-%20Physical%20layer%20-%20SOLUTIONS.pdf"
+            },
         ],
         book_chapters: {
             kurose: [],
