@@ -1551,8 +1551,8 @@ const weeks = [
     // Week 13
     //////////////////////
     {
-        topic: "Questions and Answers",
-        description: "Here are answers to some student questions",
+        topic: "Questions and Answers, Exercise solutions",
+        description: "Here are answers to student questions, and solutions to weekly exercises.",
         // Used to separate the videos into modules
         modules: [
             {
@@ -1563,6 +1563,16 @@ const weeks = [
                         mediasite_id: "2d97e696c0a0488e94eb7833de8c97641d"
                     },
                 ]
+            },
+            {
+                name: "Exercise solutions",
+                videos: [
+                    {
+                        title: "Exercise solutions: Week 4 - Protocols",
+                        mediasite_id: "b198970e85c8440cb2eea65f0130ff801d"
+                    },
+                ]
+
             }
         ],
         content: [
@@ -1580,6 +1590,10 @@ const weeks = [
             },
             {
                 title: "MAC address for custom-build PCs",
+                items: []
+            },
+            {
+                title: "Exercises for Week 4 - Protocols, documentation, encapsulation",
                 items: []
             },
         ],
